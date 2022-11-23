@@ -1,0 +1,16 @@
+<h1>New Restaurant</h1>
+
+<%=simple_form_for @restaurant do|f| %>
+	<%=f.input:name%>
+	<%=f.input:address%>
+	<%=f.input:phone_number%>
+	<%=f.input:category%>
+	<%=f.submit%>
+<%end%>
+
+<%#
+<form class="simple_form new_restaurant" id="new_restaurant" novalidate="novalidate" action="/restaurants" accept-charset="UTF-8" method="post"><input type="hidden" name="authenticity_token" value="MkYYXYDwvtCptgRzAPZFPFIw32pJB2tyBSCBLzuA4DGtCAgvbhsYznaI_1skhukj5FVMwje3aVhAm3eiJaebLg" autocomplete="off">
+	<div class="mb-3 string required restaurant_name"><label class="form-label string required" for="restaurant_name">Name <abbr title="required">*</abbr></label><input class="form-control string required" type="text" name="restaurant[name]" id="restaurant_name"></div>
+	<div class="mb-3 string required restaurant_address"><label class="form-label string required" for="restaurant_address">Address <abbr title="required">*</abbr></label><input class="form-control string required" type="text" name="restaurant[address]" id="restaurant_address"></div>
+	<input type="submit" name="commit" value="Create Restaurant" data-disable-with="Create Restaurant">
+</form> %>

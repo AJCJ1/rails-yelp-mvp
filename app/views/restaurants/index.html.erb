@@ -1,0 +1,11 @@
+<div class="container">
+<h1>Home Page</h1>
+
+   <% @restaurants.each do |r|  %>
+   <div class="btn list-group-item">
+     <%= link_to r.name, "/restaurants/#{r.id}"%>
+   </div>
+   <% end %>
+
+  <%= link_to "New Restaurant", '/restaurants/new', class:"btn btn-primary" %>
+</div>

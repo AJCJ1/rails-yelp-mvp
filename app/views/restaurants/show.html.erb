@@ -1,0 +1,21 @@
+<h1> Here are the details on <%= @restaurant.name %>: </h1>
+  <div>
+    <%= @restaurant.address %>
+  </div>
+  <div>
+    <%= @restaurant.phone_number %>
+  </div>
+  <div>
+    <%= @restaurant.category %>
+  </div>
+  <h2>Review:</h2>
+  <ul class="list-group">
+    <% @restaurant.reviews.each do |r| %>
+      <li class="list-group-item">
+        <%= r.content %>
+      </li>
+    <% end %>
+  </ul>
+
+<%= link_to "Go to Home-Page", '/restaurants', class:"btn btn-primary"  %>
+<%= link_to "Create a review", "/restaurants/#{@restaurant.id}/reviews/new", class:"btn btn-primary" %>
